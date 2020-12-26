@@ -1,0 +1,8 @@
+<?php
+if(!defined('sugarEntry') || !sugarEntry) die('Not A Valid Entry Point');
+$theme_name = "Penguin PI";
+$theme_description = "Penguin PI theme";
+$version_compatibility = 3.0;
+$max_tabs = 12;
+$png_support = false;
+?>

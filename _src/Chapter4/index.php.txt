@@ -1,0 +1,40 @@
+<?php 
+global $current_user;
+#Get the local time (from the server)
+$h = strftime("%H"); 
+$m = strftime("%M");
+?>
+<h1>Daily Tasks for 
+<?php 
+#Display the users name (to be more personal just use the first name)
+echo $current_user->first_name . " " . $current_user->last_name; 
+?></h1>
+
+<table width=100%>
+
+<?php 
+#Display tasks for the morning
+if ( $h >= 9) { ?>
+<tr><td><h2>AM Tasks</h2></td></tr>
+<tr><td>
+<a href=index.php?module=Opportunities&action=index>
+Preliminary Investigations
+</a></td></tr>
+<?php } ?>
+
+<?php 
+#Display tasks for the afternoon
+if ( $h >= 12) { ?>
+<tr><td><hr></td></tr>
+<tr><td><h2>PM Tasks</h2></td></tr>
+<tr><td>
+<a href=index.php?module=Cases&action=index>
+Investigations
+</a></td></tr>
+<?php } ?>
+<tr><td align=right>
+<?php 
+#And finally show the current (server) time
+echo "Current time:" . $h . ":" . $m; ?>
+</td></tr>
+</table>

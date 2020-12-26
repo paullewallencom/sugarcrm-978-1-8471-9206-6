@@ -1,0 +1,16 @@
+function get_list_view_data(){
+  global $locale, $current_language, $current_user, $mod_strings,
+  $app_list_strings, $sugar_config;
+  $app_strings = return_application_language($current_language);
+  require_once('modules/Currencies/Currency.php');
+  $temp_array = $this->get_list_view_array();
+  #Set the sales state
+  $temp_array['SALES_STAGE'] = 
+    empty($temp_array['SALES_STAGE']) ? '' : $temp_array['SALES_STAGE'];
+  #Set the ammount
+  $temp_array['AMOUNT'] = currency_format_number($this->amount); 
+  #Set the name
+  $temp_array["ENCODED_NAME"]=$this->name;
+  #Return the result
+  return $temp_array;
+  }

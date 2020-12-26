@@ -1,0 +1,13 @@
+#Define the databases to used
+DATABASES[0]=”penguinpi”
+DATABASES[1]=”sugarcrm_new”
+#Loop through the databases
+for DATABASE in ${DATABASES[*]}
+do
+#Count the tables
+TABLES=$(echo “show tables” |
+mysql -s -uroot -ppassword $DATABASE |
+wc -l )
+#Output the result
+echo $DATABASE $TABLES
+done

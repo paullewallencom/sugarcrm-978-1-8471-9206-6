@@ -1,0 +1,23 @@
+<?php
+if(!defined('sugarEntry') || !sugarEntry) die('Not A Valid Entry
+Point');
+$step='Needs Analysis';
+$task['title'][0] = 'Subject Interviews';
+$task['title'][1] = 'Witness Interviews';
+$task['username'][0] = 'monkw';
+$task['username'][1] = 'pittc';
+for ( $c = 0; $c <= 1; $c++ ) {
+$sql = "select id from users";
+$sql .= " where user_name = '" . $task['username'][$c] . "'";
+$result = $db->query($sql);
+$user_id = mysql_result($result,0,0);
+$sql = "insert into ppi_workflow_tasks";
+$sql .= "(id, user_id, process_step, title)";
+$sql .= " values ";
+$sql .= "('". create_guid() ."'";
+$sql .= ",'". $user_id ."'";
+$sql .= ",'". $step ."'";
+$sql .= ",'". $task['title'][$c] ."')";
+$db->query($sql);
+}
+?>

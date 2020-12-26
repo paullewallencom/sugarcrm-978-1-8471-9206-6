@@ -1,0 +1,8 @@
+require_once('data/SugarBean.php');
+require_once('modules/Contacts/Contact.php');
+require_once('modules/Tasks/Task.php');
+require_once('modules/Notes/Note.php');
+require_once('modules/Calls/Call.php');
+require_once('modules/Leads/Lead.php');
+require_once('modules/Emails/Email.php');
+require_once('include/utils.php');

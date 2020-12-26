@@ -1,0 +1,9 @@
+'date_start' => array (
+			'name' => 'date_start',
+			'vname' => 'LBL_DATE',
+			'type' => 'date',
+			'len' => '255',
+			'rel_field' => 'time_start',
+			'massupdate'=>true,
+			'comment' => 'Date of last inbound email check',
+		),

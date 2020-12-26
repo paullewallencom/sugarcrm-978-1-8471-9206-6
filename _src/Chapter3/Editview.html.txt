@@ -1,0 +1,27 @@
+<tr><!-- BEGIN: open_source -->
+<td  class="dataLabel">
+  <span sugar='slot11'>
+    {MOD.Surveillance_Required_c_10}
+  </span sugar='slot'>
+</td>
+<td class="dataField">
+  <span sugar='slot11b'>
+    <select title='{SURVEILLANCE_REQUIRED_C_HELP}'
+    name="surveillance_required_c">{OPTIONS_SURVEILLANCE_REQUIRED_C}
+    </select>
+  </span sugar='slot'>
+</td>
+<td  class="dataLabel">
+  <span sugar='slot12'>
+    {MOD.LBL_SALES_STAGE} 
+    <span class="required">{APP.LBL_REQUIRED_SYMBOL}</span>
+  </span sugar='slot'>
+</td>
+<td class="dataField">
+  <span sugar='slot12b'>
+    <select tabindex='2'
+     name='sales_stage'>{SALES_STAGE_OPTIONS}
+    </select>
+  </span sugar='slot'>
+</td>
+<!-- END: open_source --></tr>

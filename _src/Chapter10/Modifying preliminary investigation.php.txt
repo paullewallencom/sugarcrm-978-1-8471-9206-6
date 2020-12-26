@@ -1,0 +1,47 @@
+<?php
+#As always ensure that the file can only run from SugarCRM
+if(!defined('sugarEntry') || !sugarEntry) die('Not A Valid Entry
+Point');
+//Start by including the base Dashlet class
+require_once('include/Dashlets/Dashlet.php');
+class PPIDashlet extends Dashlet{
+function PPIDashlet($id, $def){
+global $current_user, $app_strings;
+parent::Dashlet($id);
+$this->title = 'My PPI';
+}
+function display($text = ''){
+#Initialize the current user and the database
+global $current_user, $db;
+#Create the sql to be run
+$sql = "select o.id,o.name,u.user_name";
+$sql .= " from opportunities o, users u";
+$sql .= " where o.assigned_user_id";
+$sql .= " in (select id from users";
+$sql .=
+" where reports_to_id = '" .
+$current_user->reports_to_id . "')";
+$sql .= " and o.assigned_user_id = u.id";
+#Obtain the results
+$result = $db->query($sql);
+Define the text to be returned
+$text = 'Team Preliminary Investigations<hr>';
+$text .= "<table>";
+$r=0;
+while ($r < mysql_numrows($result)) {
+$text .= "<tr>";
+$text .= "<td><a href=index.php?";
+$text .= "action=DetailView&module=Opportunities&record=";
+$text .= mysql_result($result,$r,0) . ">";
+$text .= mysql_result($result,$r,1);
+$text .= "</a></td>";
+$text .= "<td>" . mysql_result($result,$r,2) . "</td>";
+$text .= "</tr>";
+$r++;
+}
+$text .= "</table>";
+#Output the text
+return parent::display($text);
+}
+}
+?>

@@ -1,0 +1,31 @@
+#File:  ppi_prelim_change.php
+<?php
+require_once('data/SugarBean.php');
+require_once('modules/Opportunities/Opportunity.php');
+require_once('custom/include/penguin_pi_functions.php');
+
+class ppi_prelim_change {
+  function ppi_prelim_change (&$bean, $event, $arguments) {
+    global $sugar_config;
+    
+    if ($bean->fetched_row['assigned_user_id']!=$bean->assigned_user_id) 
+    {
+      #Obtain the information for the old user
+      $old_user = new User(); #Create a user object
+      $old_user->retrieve($bean->fetched_row['assigned_user_id']); 
+      $old_assigned_user_name = 
+      $old_user->first_name.' '.$old_user->last_name;
+
+      #Obtain the information for the new user
+      $new_user = new User();
+      $new_user->retrieve($bean->assigned_user_id); 
+      $new_assigned_user_name = 
+      $new_user->first_name.' '.$new_user->last_name;
+
+      #Write the information to the log file
+      WriteToLogFile 
+        ($old_assigned_user_name . " -> " . $new_assigned_user_name );
+    }
+  }
+}
+?>

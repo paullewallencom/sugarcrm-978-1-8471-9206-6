@@ -1,0 +1,8 @@
+<?php
+if(!defined('sugarEntry') || !sugarEntry) die('Not A Valid Entry
+Point');
+$mod_strings['lbl_monthly_new_prelim_invest'] =
+"Monthly New Preliminary Investigations";
+$mod_strings['lbl_monthly_open_invest'] = "Monthly Open
+Investigations";
+?>

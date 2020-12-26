@@ -1,0 +1,13 @@
+<?php
+#Define the entry point
+if(!defined('sugarEntry') || !sugarEntry) die('Not A Valid Entry
+Point');
+#Load any required files
+require_once('data/SugarBean.php');
+require_once('modules/Opportunities/Opportunity.php');
+#Define the class
+class ppi_workflow {
+function ppi_workflow (&$bean, $event, $arguments) {
+}
+}
+?>

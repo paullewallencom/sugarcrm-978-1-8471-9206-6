@@ -1,0 +1,3 @@
+$moduleList[] = 'TestApp';
+$beanList['NewTab'] = 'TestApp';
+$beanFiles['NewTab'] = 'modules/TestApp/TestApp.php';

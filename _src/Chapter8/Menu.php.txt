@@ -1,0 +1,9 @@
+<?php
+if(!defined('sugarEntry') || !sugarEntry) die('Not A Valid Entry
+Point');
+$url = "index.php?module=ppi_reports&action=index&report=";
+$module_menu[] = Array($url . "monthly_new_prelim_invest",
+'Monthly New Preliminary Investigations');
+$module_menu[] = Array($url . "monthly_open_invest",
+'Monthly Open Investigations');
+?>

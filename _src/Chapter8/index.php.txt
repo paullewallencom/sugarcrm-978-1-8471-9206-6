@@ -1,0 +1,10 @@
+if ($report == "monthly_new_prelim_invest") {
+$sql = ...
+$report_title = $mod_strings['lbl_monthly_new_prelim_invest']."
+Report";
+} else if ($report == "monthly_open_invest") {
+$sql = ...
+$report_title = "$mod_strings['lbl_monthly_open_invest'] . " Report";
+} else {
+$sql = "select 'Choose report'";
+}

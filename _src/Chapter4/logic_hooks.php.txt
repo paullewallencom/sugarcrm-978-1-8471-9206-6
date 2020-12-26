@@ -1,0 +1,12 @@
+#File: logic_hooks.php
+<?php
+if(!defined('sugarEntry') || !sugarEntry) die('Not A Valid Entry Point');
+$hook_array = Array(); #Create an array
+
+$hook_array['before_save'] = Array(); #Create a sub-array
+
+#Write the required information to the array
+$hook_array['before_save'][] = Array(1, 'ppi_prelim_change', 
+  'custom/include/ppi_prelim_change.php',
+  'ppi_prelim_change', 'ppi_prelim_change');
+?>

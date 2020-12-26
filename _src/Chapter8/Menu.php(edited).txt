@@ -1,0 +1,10 @@
+<?php
+if(!defined('sugarEntry') || !sugarEntry) die('Not A Valid Entry
+Point');
+$module_menu[] =
+Array("index.php?module=ppi_report_manager&action=EditView",
+"New Report");
+$module_menu[] =
+Array("index.php?module=ppi_report_manager&action=index",
+"List Reports");
+?>

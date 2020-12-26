@@ -1,0 +1,14 @@
+<?php
+if(!defined('sugarEntry') || !sugarEntry) die('Not A Valid Entry
+Point');
+require_once ('modules/ppi_report_manager/ppi_report_manager.php');
+require_once('include/ListView/ListViewSmarty.php');
+require_once('modules/ppi_report_manager/metadata/listviewdefs.php');
+$seedReport = new ppi_report_manager();
+$lv = new ListViewSmarty();
+$lv->displayColumns = $listViewDefs['Report'];
+$lv->setup($seedReport,
+'include/ListView/ListViewGeneric.tpl', $where,
+$listViewDefs['Report']);
+echo $lv->display();
+?>

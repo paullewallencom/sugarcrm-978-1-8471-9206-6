@@ -1,0 +1,18 @@
+<?php
+if(!defined('sugarEntry') || !sugarEntry) die('Not A Valid Entry
+Point');
+$listViewDefs['Report'] = array(
+'NAME' => array(
+'width' => '50',
+'label' => 'LBL_NAME',
+'default' => true),
+'DESCRIPTION' => array(
+'width' => '50',
+'label' => 'LBL_DESCRIPTION',
+'default' => true),
+'REPORT_SQL' => array(
+'width' => '50',
+'label' => 'LBL_REPORT_SQL',
+'default' => true),
+);
+?>

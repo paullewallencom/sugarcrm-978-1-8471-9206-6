@@ -1,0 +1,32 @@
+switch ($bean->sales_stage) {
+case "Prospecting":
+$assigned_user = "varadyf";
+break;
+case "Qualification":
+$assigned_user = "monkw";
+break;
+case "Needs Analysis":
+$assigned_user = "pittc";
+break;
+case "Value Proposition":
+$assigned_user = "brockd";
+break;
+case "Id. Decision Makers":
+$assigned_user = "brunettig";
+break;
+case "Perception Analysis":
+$assigned_user = "thanetl";
+break;
+case "Proposal/Price Quote":
+$assigned_user = "wallanderk";
+break;
+case "Negotiation/Review":
+$assigned_user = "dobbsm";
+break;
+case "Closed Won":
+$assigned_user = "bluek";
+break;
+case "Closed Lost":
+$assigned_user = "bluek";
+break;
+}

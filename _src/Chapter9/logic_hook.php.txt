@@ -1,0 +1,10 @@
+<?php
+#As always ensure that the file can only be accessed through SugarCRM
+if(!defined('sugarEntry') || !sugarEntry) die('Not A Valid Entry
+Point');
+$hook_array = Array(); #Create an array
+$hook_array['before_save'] = Array();
+$hook_array['before_save'][] = Array(1, 'ppi_workflow',
+'custom/include/ppi_workflow.php',
+'ppi_workflow', 'ppi_workflow');
+?>

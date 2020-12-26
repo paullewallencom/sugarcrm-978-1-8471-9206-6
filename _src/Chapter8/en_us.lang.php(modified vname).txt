@@ -1,0 +1,13 @@
+<?php
+if(!defined('sugarEntry') || !sugarEntry) die('Not A Valid Entry
+Point');
+$mod_strings = array (
+'LBL_MODULE_NAME' => 'ppi_report_manager',
+'LBL_MODULE_TITLE' => 'Report Manager',
+'LBL_ID' => 'ID',
+'LBL_DESCRIPTION' => 'Title',
+'LBL_REPORT_SQL' => 'SQL',
+'LBL_NAME' => 'Name',
+'LBL_ASSIGNED_USER_ID' => 'Owner',
+);
+?>

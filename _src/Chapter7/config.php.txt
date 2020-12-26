@@ -1,0 +1,8 @@
+array (
+'db_host_name' => 'localhost',
+'db_host_instance' => '',
+'db_user_name' => 'penguinpi_user',
+'db_password' => 'penguinpi_go',
+'db_name' => 'penguinpi',
+'db_type' => 'mysql',
+)

@@ -1,0 +1,12 @@
+$app_list_strings['sales_stage_dom']=array (
+'Prospecting' => 'Fact Gathering',
+'Qualification' => 'Witness and Subject Location',
+'Needs Analysis' => 'Witness and Subject Interviews',
+'Value Proposition' => 'Scene Investigation',
+'Id. Decision Makers' => 'Financial and background Investigation',
+'Perception Analysis' => 'Document and evidence retrieval',
+'Proposal/Price Quote' => 'Covert Camera surveillance',
+'Negotiation/Review' => 'Wiretapping',
+'Closed Won' => 'Full Investigation required',
+'Closed Lost' => 'Insufficient Evidence',
+);

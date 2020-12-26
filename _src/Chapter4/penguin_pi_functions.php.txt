@@ -1,0 +1,12 @@
+#File:  penguin_pi_functions.php
+<?php
+function WriteToLogFile($strText) {
+  $File = '/www/penguin_pi/test.log'; #Choose a suitable file name
+  $Handle = fopen($File, 'a'); #Open the file
+  $Data = $strText . "\n"; #Add a carriage return to the text
+  if($Handle) { // avoid further errors on file access failure
+  fwrite($Handle, $Data); #Write the text to the file
+  fclose($Handle); #Close the file
+  }
+}
+?>

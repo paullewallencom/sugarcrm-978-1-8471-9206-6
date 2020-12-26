@@ -1,0 +1,23 @@
+insert into fields_meta_data
+( id,
+name,
+label,
+help,
+custom_module,
+data_type,
+ext1,
+default_value,
+date_modified
+)
+values
+( 'Opportunitiessurv1_req_c',
+'surv1_req_c',
+'surv1_req_c_10',
+'Surveillance?',
+'Opportunities',
+'enum',
+'surveillance_required_dom',
+'YES',
+now()
+)
+;

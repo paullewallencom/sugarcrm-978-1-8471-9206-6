@@ -1,0 +1,7 @@
+<?php
+include ('modules/Emails/language/en_us.lang.php');
+include ('modules/Emails/ListView.php');
+include ('modules/Opportunities/language/en_us.lang.php');
+include ('custom/modules/Opportunities/language/en_us.lang.php');
+include ('modules/Opportunities/ListView.php');
+?>

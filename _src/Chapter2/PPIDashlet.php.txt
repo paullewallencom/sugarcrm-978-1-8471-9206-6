@@ -1,0 +1,15 @@
+<?php
+//Start by including the base Dashlet class
+require_once('include/Dashlets/Dashlet.php');
+class PPIDashlet extends Dashlet{
+function PPIDashlet($id, $def){
+global $current_user, $app_strings;
+parent::Dashlet($id);
+$this->title = 'My PPI';
+}
+function display($text = ''){
+$text = 'Dashlet for the PPI Organization';
+return parent::display($text);
+}
+}
+?>

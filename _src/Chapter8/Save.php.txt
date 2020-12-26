@@ -1,0 +1,52 @@
+<?php
+if(!defined('sugarEntry') || !sugarEntry) die('Not A Valid Entry
+Point');
+require_once('include/utils.php');
+require_once('modules/ppi_report_manager/vardefs.php');
+//Function to prepare data for the database
+function format_mysql_text ($ip_text) {
+return mysql_real_escape_string(
+html_entity_decode(str_replace("&#039;","'",$ip_text)));
+}
+//Identify the fields to be loaded
+$table = $dictionary['ppi_report_manager']['table'];
+while (list($key, $value) = each($dictionary['ppi_report_
+manager']['fields'])) {
+if ($key != "id") {
+if ($_REQUEST[$key] != "") {
+$field_list[] = $key;
+}
+}
+}
+/*Create a SQL statement according to whether this is an insert or an
+update*/
+if ($_REQUEST['record'] == "") {
+$field_names .= "id";
+$field_values .= "'" . create_guid() . "'";
+foreach ($field_list as $key) {
+$field_names .= "," . $key;
+$field_values .= ",'" . format_mysql_text($_REQUEST[$key]) . "'";
+}
+$sql = "insert into $table";
+$sql .= "(" . $field_names . ")";
+$sql .= " values ";
+$sql .= " (". $field_values . ")";
+} else {
+foreach ($field_list as $key) {
+if ($sql_body != "") {
+$sql_body .= ",";
+}
+$sql_body .= $key . " = '" . format_mysql_text($_REQUEST[$key])
+."'";
+}
+$sql = "update $table set ";
+$sql .= $sql_body;
+$sql .= " where id ='" . $_REQUEST['record'] ."'";
+}
+//Send the SQL to the database
+$db->query($sql);
+//Return to the index page
+header
+("Location: index.php?module=".$_REQUEST['module']."&action=index")
+;
+?>

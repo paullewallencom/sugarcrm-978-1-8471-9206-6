@@ -1,0 +1,7 @@
+<?php
+$dashletMeta['PPIDashlet'] = array(
+'title' => 'PPI Dashlet',
+'description' => 'A Dashlet for Penguin P.I.',
+'icon' => 'themes/PenguinPI/images/Tasks.gif',
+'category' => 'Tools');
+?>

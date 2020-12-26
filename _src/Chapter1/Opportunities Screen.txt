@@ -1,0 +1,13 @@
+<?php
+$opp_single = 'Preliminary Investigation';
+$opp_title = $opp_single . 's';
+$mod_strings['LBL_MODULE_NAME'] = $opp_title;
+$mod_strings['LBL_MODULE_TITLE'] = $opp_title . ': Home';
+$mod_strings['LBL_LIST_FORM_TITLE'] = $opp_title . ' List';
+$mod_strings['LBL_OPPORTUNITY_NAME'] = $opp_single . ' Name';
+$mod_strings['LBL_NEW_FORM_TITLE'] = 'Create ' . $opp_title;
+$mod_strings['LNK_NEW_OPPORTUNITY'] = 'Create ' . $opp_title;
+$mod_strings['LNK_OPPORTUNITY_LIST'] = $opp_title;
+$mod_strings['LBL_TOP_OPPORTUNITIES'] = 'My Top Open ' . $opp_title;
+$mod_strings['LBL_DEFAULT_SUBPANEL_TITLE'] = $opp_title;
+?>
